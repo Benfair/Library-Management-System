@@ -1,6 +1,6 @@
 package project.models;
 
-import project.DatabaseConnection;
+import project.database.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

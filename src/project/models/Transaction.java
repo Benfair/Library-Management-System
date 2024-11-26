@@ -1,12 +1,12 @@
 package project.models;
 
-import project.DatabaseConnection;
+import project.database.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class ViewTransactions {
+public class Transaction {
     public void viewTransactions() {
         String query = "SELECT * FROM transactions";
 

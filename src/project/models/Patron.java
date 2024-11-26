@@ -1,12 +1,12 @@
 package project.models;
 
-import project.DatabaseConnection;
+import project.database.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class ViewPatrons {
+public class Patron {
     public void viewPatrons() {
         String query = "SELECT * FROM patrons";
 
