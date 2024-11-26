@@ -38,17 +38,4 @@ public class Patron {
     public LocalDateTime getRegistrationDate() {
         return registrationDate;
     }
-
-    // Optionally, you can add setters if needed:
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
 }
