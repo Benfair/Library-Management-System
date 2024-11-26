@@ -1,11 +1,11 @@
 package project.models;
 
 public class Book {
-    private int id;
-    private String title;
-    private String author;
-    private String isbn;
-    private int copiesAvailable;
+    private final int id;
+    private final String title;
+    private final String author;
+    private final String isbn;
+    private final int copiesAvailable;
 
     // Constructor
     public Book(int id, String title, String author, String isbn, int copiesAvailable) {
