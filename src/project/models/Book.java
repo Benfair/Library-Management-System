@@ -5,7 +5,7 @@ public class Book {
     private final String title;
     private final String author;
     private final String isbn;
-    private final int copiesAvailable;
+    private int copiesAvailable;
 
     // Constructor
     public Book(int id, String title, String author, String isbn, int copiesAvailable) {
