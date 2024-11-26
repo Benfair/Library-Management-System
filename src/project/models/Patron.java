@@ -3,11 +3,11 @@ package project.models;
 import java.time.LocalDateTime;
 
 public class Patron {
-    private int id;
-    private String name;
-    private String email;
-    private String contact;
-    private LocalDateTime registrationDate;
+    private final int id;
+    private final String name;
+    private final String email;
+    private final String contact;
+    private final LocalDateTime registrationDate;
 
     // Constructor
     public Patron(int id, String name, String email, String contact, LocalDateTime registrationDate) {
