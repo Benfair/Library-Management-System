@@ -1,36 +1,54 @@
 package project.models;
 
-import project.database.DatabaseConnection;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.time.LocalDateTime;
 
 public class Patron {
-    public void viewPatrons() {
-        String query = "SELECT * FROM patrons";
+    private int id;
+    private String name;
+    private String email;
+    private String contact;
+    private LocalDateTime registrationDate;
 
-        try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(query);
-             ResultSet rs = stmt.executeQuery()) {
+    // Constructor
+    public Patron(int id, String name, String email, String contact, LocalDateTime registrationDate) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.contact = contact;
+        this.registrationDate = registrationDate;
+    }
 
-            System.out.println("\nPatrons:");
-            System.out.println("-------------------------------------------");
-            System.out.printf("%-10s %-20s %-20s %-10s\n", "Patron ID", "Name", "Email", "Contact");
-            System.out.println("-------------------------------------------");
+    // Getters
+    public int getId() {
+        return id;
+    }
 
-            while (rs.next()) {
-                int patronId = rs.getInt("patron_id");
-                String name = rs.getString("name");
-                String email = rs.getString("email");
-                String contact = rs.getString("contact");
+    public String getName() {
+        return name;
+    }
 
-                System.out.printf("%-10d %-20s %-20s %-10s\n", patronId, name, email, contact);
-            }
-            System.out.println("-------------------------------------------");
+    public String getEmail() {
+        return email;
+    }
 
-        } catch (Exception e) {
-            System.out.println("Error fetching patrons: " + e.getMessage());
-        }
+    public String getContact() {
+        return contact;
+    }
+
+    public LocalDateTime getRegistrationDate() {
+        return registrationDate;
+    }
+
+    // Optionally, you can add setters if needed:
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 }

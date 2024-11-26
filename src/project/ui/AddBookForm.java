@@ -27,8 +27,6 @@ public class AddBookForm extends VBox {
         Label copiesLabel = new Label("Copies Available:");
         TextField copiesField = new TextField();
 
-        Label messageLabel = new Label();
-
         Button btnSave = new Button("Save");
         btnSave.setOnAction(event -> {
             String title = titleField.getText();
@@ -60,7 +58,7 @@ public class AddBookForm extends VBox {
                 authorLabel, authorField,
                 isbnLabel, isbnField,
                 copiesLabel, copiesField,
-                btnSave, messageLabel
+                btnSave
         );
     }
 }
